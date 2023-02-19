@@ -46,7 +46,8 @@ class Table:
             elif operator == 'BETWEEN':
                 return row_value >= value[0] and row_value <= value[1]
         return False
-
+      # Added functionality for the keywords "NOT" and "BETWEEN"
+    
 
 class MiniDB:
     def execute_select(self, table_name, where_clause=None):
