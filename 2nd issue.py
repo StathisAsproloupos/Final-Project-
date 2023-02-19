@@ -39,6 +39,7 @@ class MiniDB:
             print(f"Error: Index can only be created over unique or primary key columns")
 
 class Column:
+    # Creating class Column
     def __init__(self, name, data_type, unique=False, primary_key=False, index=None):
         self.name = name
         self.data_type = data_type
