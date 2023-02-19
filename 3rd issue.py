@@ -1,6 +1,4 @@
-First, let's define a few helper functions for query plan building and cost estimation:
-
-
+#1
 
 from typing import List, Dict, Union
 
@@ -50,10 +48,7 @@ def estimate_query_cost(query_plan: List[Dict]) -> float:
             cost += left_stats['distinct_values'] * right_stats['distinct_values']
     return cost
 
-
-
-
-Next, let's define a function that generates equivalent query plans based on relational algebraic equivalence transformation rules:
+#2
 
 from typing import List, Dict
 from table import Table
@@ -113,7 +108,7 @@ def generate_query_plans(table: Table, select_conditions: List[str], project_col
     return query_plan
 
 
-
+#3
 
 from typing import Dict, List
 import math
@@ -290,8 +285,9 @@ return best_plan
 
 
 
-# Implement a simple query evaluator that uses per column statistics
-# to evaluate the cost of each query plan
+# Implement a simple query evaluator that uses per column statistics to evaluate the cost of each query plan
+
+#4
 
 from typing import List
 from database import MiniDB, Table
@@ -333,26 +329,3 @@ class QueryOptimizer:
 
         memo[node] = best_plan
         return best_plan
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
